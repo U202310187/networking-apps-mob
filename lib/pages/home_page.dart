@@ -20,12 +20,7 @@ class HomePage extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.shopping_cart),
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => CartPage(cartBloc: cartBloc),
-                ),
-              );
+              Navigator.pushNamed(context, '/cart');
             },
           ),
         ],

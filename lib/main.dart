@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'bloc/cart_bloc.dart';
 import 'pages/home_page.dart';
+import 'pages/cart_page.dart';
 
 void main() {
   final CartBloc cartBloc = CartBloc();
@@ -20,7 +21,12 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Mini Carrito',
         theme: ThemeData(primarySwatch: Colors.teal),
-        home: HomePage(cartBloc: cartBloc),
+        // Rutas nombradas - mínimo 2 routes
+        initialRoute: '/',
+        routes: {
+          '/': (context) => HomePage(cartBloc: cartBloc),
+          '/cart': (context) => CartPage(cartBloc: cartBloc),
+        },
       ),
     );
   }
