@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tienda Flutter"),
+        title: Text("TiendAPI"),
         actions: [
           IconButton(
             icon: Icon(Icons.shopping_cart),
